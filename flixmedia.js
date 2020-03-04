@@ -192,6 +192,7 @@ var descrip_samsung =[
     "id_prod": "2582"
 }
 ];
+
 var brand_product = $('.brandName').attr('class').split(' ')[1];
 var flixinserted = 0;
 if(brand_product === 'Samsung') {
