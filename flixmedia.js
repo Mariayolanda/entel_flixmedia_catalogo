@@ -1,3 +1,4 @@
+// flixmedia
 var descrip_samsung =[
 {
     "product_name": "Galaxy A10s",
@@ -223,4 +224,27 @@ if(brand_product === 'Samsung') {
             flixinserted = 1;
         }
     });
+}
+
+// contenido duplicado
+if (window.location.pathname == "/personas/celulares/kits/samsung") {
+    window.location.href = "https://catalogo.entel.pe/samsung";
+} else if (window.location.pathname == "/personas/celulares/smarthphones/alcatel/producto") {
+    window.location.href = "https://catalogo.entel.pe/alcatel"
+} else if (window.location.pathname == "/personas/celulares/smarthphones/apple") {
+    window.location.href = "https://catalogo.entel.pe/apple"
+} else if (window.location.pathname == "/personas/celulares/smarthphones/lg") {
+    window.location.href = "https://catalogo.entel.pe/lg"
+} else if (window.location.pathname == "/personas/celulares/motorola") {
+    window.location.href = "https://catalogo.entel.pe/motorola"
+} else if (window.location.pathname == "/personas/celulares/smarthphones/motorola") {
+    window.location.href = "https://catalogo.entel.pe/motorola"
+} else if (window.location.pathname == "/personas/celulares/nokia") {
+    window.location.href = "https://catalogo.entel.pe/nokia"
+} else if (window.location.pathname == "/personas/celulares/samsung") {
+    window.location.href = "https://catalogo.entel.pe/samsung"
+} else if (window.location.pathname == "/personas/celulares/kits/xiaomi") {
+    window.location.href = "https://catalogo.entel.pe/xiaomi"
+} else if (window.location.pathname == "/personas/celulares/smarthphones/xiaomi") {
+    window.location.href = "https://catalogo.entel.pe/xiaomi"
 }
