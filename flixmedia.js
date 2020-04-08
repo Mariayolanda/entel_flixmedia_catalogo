@@ -226,25 +226,392 @@ if(brand_product === 'Samsung') {
     });
 }
 
-// contenido duplicado
-if (window.location.pathname == "/personas/celulares/kits/samsung") {
-    window.location.href = "https://catalogo.entel.pe/samsung";
-} else if (window.location.pathname == "/personas/celulares/smarthphones/alcatel/producto") {
-    window.location.href = "https://catalogo.entel.pe/alcatel"
-} else if (window.location.pathname == "/personas/celulares/smarthphones/apple") {
-    window.location.href = "https://catalogo.entel.pe/apple"
-} else if (window.location.pathname == "/personas/celulares/smarthphones/lg") {
-    window.location.href = "https://catalogo.entel.pe/lg"
-} else if (window.location.pathname == "/personas/celulares/motorola") {
-    window.location.href = "https://catalogo.entel.pe/motorola"
-} else if (window.location.pathname == "/personas/celulares/smarthphones/motorola") {
-    window.location.href = "https://catalogo.entel.pe/motorola"
-} else if (window.location.pathname == "/personas/celulares/nokia") {
-    window.location.href = "https://catalogo.entel.pe/nokia"
-} else if (window.location.pathname == "/personas/celulares/samsung") {
-    window.location.href = "https://catalogo.entel.pe/samsung"
-} else if (window.location.pathname == "/personas/celulares/kits/xiaomi") {
-    window.location.href = "https://catalogo.entel.pe/xiaomi"
-} else if (window.location.pathname == "/personas/celulares/smarthphones/xiaomi") {
-    window.location.href = "https://catalogo.entel.pe/xiaomi"
-}
+// duplicate content
+var duplicate_content =[
+    {
+        pathname: '/personas/celulares/kits/samsung',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/kits/entel',
+        href: 'https://catalogo.entel.pe/'
+    },
+    {
+        pathname: '/personas/celulares/kits/motorola',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/alcatel/Si/Kit/Prepago',
+        href: 'https://catalogo.entel.pe/alcatel'
+    },
+    {
+        pathname: '/personas/celulares/alcatel/Si/Prepago/Personas',
+        href: 'https://catalogo.entel.pe/alcatel'
+    },
+    {
+        pathname: '/personas/celulares/alcatel/Prepago%20Migra/--',
+        href: 'https://catalogo.entel.pe/alcatel'
+    },
+    {
+        pathname: '/personas/celulares/alcatel/Si/Prepago/No',
+        href: 'https://catalogo.entel.pe/alcatel'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/apple',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Postpago%20Migra',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Personas/Si/No',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Prepago/Kit/--',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Si/En%20tienda/No',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/No/Personas/Si/Libres',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Personas/Kit/Postpago%20Migra',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Si/Kit/Si/No',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Libres/Personas/No/Libre',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Postpago%20Migra/--/Kit',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/--/Kit/Si/--',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/apple/Postpago%20Migra/Si/Si/Kit',
+        href: 'https://catalogo.entel.pe/apple'
+    },
+    {
+        pathname: '/personas/celulares/huawei',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/huawei',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/xiaomi',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/huawei',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/lg/huawei',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Libres/Si',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Si/No',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Postpago%20Migra',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/No/Postpago%20Migra',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Libre/Personas/Kit/No',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Libres/Personas/Si/Si',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Libres/No/Si/Personas',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Si/En%20tienda/---',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Si/Si/Kit/---',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/huawei/Si/Kit/En%20tienda/Prepago',
+        href: 'https://catalogo.entel.pe/huawei'
+    },
+    {
+        pathname: '/personas/celulares/lenovo/Si/Prepago',
+        href: 'https://catalogo.entel.pe/lenovo'
+    },
+    {
+        pathname: '/personas/celulares/lenovo/Producto/Personas',
+        href: 'https://catalogo.entel.pe/lenovo'
+    },
+    {
+        pathname: '/personas/celulares/lenovo/Prepago%20Migra/Personas',
+        href: 'https://catalogo.entel.pe/lenovo'
+    },
+    {
+        pathname: '/personas/celulares/lenovo/Prepago%20Migra/En%20tienda',
+        href: 'https://catalogo.entel.pe/lenovo'
+    },
+    {
+        pathname: '/personas/celulares/lg/own',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/alcatel',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/lg',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/lg/xiaomi',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/lg/alcatel',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/No/En%20tienda',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/Prepago%20Línea%20Nueva',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/Personas/Libres/Si/Producto',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/Si/--/Prepago%20Migra',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/lg/--/Postpago%20Migra/Si',
+        href: 'https://catalogo.entel.pe/lg'
+    },
+    {
+        pathname: '/personas/celulares/motorola',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/motorola',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/lg/motorola',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/--/Prepago',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/Prepago%20Migra/Kit',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/Personas/Si/Prepago/No',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/--/Si/Prepago/Kit',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/8%20MP%20o%20más/Personas',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/motorola/Prepago/Prepago%20Línea%20Nueva/Personas',
+        href: 'https://catalogo.entel.pe/motorola'
+    },
+    {
+        pathname: '/personas/celulares/nokia',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/own',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/nokia',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/motorola',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/nokia',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Si',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/No/--',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Si/Prepago%20Migra',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Si/Kit/Libre',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Libre/Si/Personas',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Prepago%20Línea%20Nueva',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/En%20tienda/Prepago%20Migra',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Kit/Prepago%20Migra/Si',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/nokia/Personas/No/--/Kit',
+        href: 'https://catalogo.entel.pe/nokia'
+    },
+    {
+        pathname: '/personas/celulares/kits/own',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/own',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/Personas/Prepago',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/Prepago/No',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/Si/--',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/Prepago%20Línea%20Nueva',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/No/Postpago%20Línea%20Nueva',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/own/Prepago%20Línea%20Nueva/Producto/Si',
+        href: 'https://catalogo.entel.pe/own'
+    },
+    {
+        pathname: '/personas/celulares/samsung',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/huawei',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/motorola',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/samsung',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/own',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/samsung',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Postpago%20Renovación',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Libres/Kit/161',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Personas/Kit/Postpago%20Migra',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Libre/Kit/Libres/Personas',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Prepago%20Línea%20Nueva/Kit',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/--/Si/Prepago/Personas',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/samsung/Si/--/Prepago%20Migra',
+        href: 'https://catalogo.entel.pe/samsung'
+    },
+    {
+        pathname: '/personas/celulares/xiaomi',
+        href: 'https://catalogo.entel.pe/xiaomi'
+    },
+    {
+        pathname: '/personas/celulares/kits/xiaomi',
+        href: 'https://catalogo.entel.pe/xiaomi'
+    },
+    {
+        pathname: '/personas/celulares/smarthphones/xiaomi',
+        href: 'https://catalogo.entel.pe/xiaomi'
+    }
+];
+
+duplicate_content.forEach(function(item) {
+    if (item.pathname === window.location.pathname) {
+        window.location.href = item.href;
+    }
+});
