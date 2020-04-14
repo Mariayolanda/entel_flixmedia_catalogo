@@ -607,6 +607,42 @@ var duplicate_content =[
     {
         pathname: '/personas/celulares/smarthphones/xiaomi',
         href: 'https://catalogo.entel.pe/xiaomi'
+    },
+    {
+        pathname: '/galaxy-a50-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=especial&cuota=18',
+        href: 'https://catalogo.entel.pe/samsung-galaxy-a50-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=especial&cuota=18'
+    },
+    {
+        pathname: '/moto-g7-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=regular&cuota=18',
+        href: 'https://catalogo.entel.pe/motorola-moto-g7-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=regular&cuota=18'
+    },
+    {
+        pathname: '/moto-g7-negro-chip-85-w/p?modalidad=postpago-migra&plan=chip-85.9&oferta=especial&cuota=12',
+        href: 'https://catalogo.entel.pe/motorola-moto-g7-negro-chip-85-w/p?modalidad=postpago-migra&plan=chip-85.9&oferta=especial&cuota=12'
+    },
+    {
+        pathname: '/redmi-note-7-neptune-blue-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=regular&cuota=18',
+        href: 'https://catalogo.entel.pe/xiaomi-redmi-note-7-neptune-blue-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=regular&cuota=18'
+    },
+    {
+        pathname: '/p30-lite-negro-obsidiana-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=especial&cuota=18',
+        href: 'https://catalogo.entel.pe/huawei-p30-lite-negro-obsidiana-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=especial&cuota=18'
+    },
+    {
+        pathname: '/y9s-negro-chip-85-w/p?modalidad=libres&plan=Libre&oferta=regular&cuota=0',
+        href: 'https://catalogo.entel.pe/huawei-y9s-negro-chip-85-w/p?modalidad=libres&plan=Libre&oferta=regular&cuota=0'
+    },
+    {
+        pathname: '/y9s-negro-chip-85-w/p?modalidad=postpago-migra&plan=chip-85.9&oferta=regular&cuota=0',
+        href: 'https://catalogo.entel.pe/huawei-y9s-negro-chip-85-w/p?modalidad=postpago-migra&plan=chip-85.9&oferta=regular&cuota=0'
+    },
+    {
+        pathname: '/redmi-note-7-neptune-blue-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=especial&cuota=12',
+        href: 'https://catalogo.entel.pe/xiaomi-redmi-note-7-neptune-blue-chip-65-w/p?modalidad=postpago-migra&plan=chip-65.9&oferta=especial&cuota=12'
+    },
+    {
+        pathname: '/p-smart-negro-chip-65-w/p?modalidad=libres&plan=Libre&oferta=regular&cuota=0',
+        href: 'https://catalogo.entel.pe/huawei-p-smart-negro-chip-65-w/p?modalidad=libres&plan=Libre&oferta=regular&cuota=0'
     }
 ];
 
