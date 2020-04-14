@@ -613,7 +613,7 @@ var duplicate_content =[
         href: 'https://catalogo.entel.pe/samsung-galaxy-a50-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=especial&cuota=18'
     },
     {
-        pathname: '/moto-g7-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=regular&cuota=18',
+        pathname: '/Sistema/404?ProductLinkNotFound=moto-g7-negro-chip-85-w',
         href: 'https://catalogo.entel.pe/motorola-moto-g7-negro-chip-85-w/p?modalidad=postpago-renovacion&plan=chip-85.9&oferta=regular&cuota=18'
     },
     {
